@@ -7,126 +7,117 @@
     <title>Document</title>
 </head>
 <body>
-
     <p id="para"></p>
+<script>
+    function randomLetterGen() {
+    let randomNum = Math.random() * 26;
+    randomNum = Math.round(randomNum);
 
-    <script>
-       
-     function randomLetterGen() {
-        let randomNum = Math.random() * 26;
-        randomNum = Math.round(randomNum);
+    if (randomNum < 1) {
+        randomNum = 1;
+    }
 
-        if (randomNum < 1) {
-            randomNum = 1;
-        }
-        
-        switch (randomNum) {
-            case 1 :
-                randomNum = 'A';
-                break;
-            case 2 :
-                randomNum = 'B';
-                break;
-            case 3 :
-                randomNum = 'C';
-                break;
-            case 4 :
-                randomNum = 'D';
-                break;
-            case 5 :
-                randomNum = 'E';
-                break;
-            case 6 :
-                randomNum = 'F';
-                break;
-            case 7 :
-                randomNum = 'G';
-                break;
-            case 8 :
-                randomNum = 'H';
-                break;
-            case 9 :
-                randomNum = 'I';
-                break;
-            case 10 :
-                randomNum = 'J';
-                break;
-            case 11 :
-                randomNum = 'K';
-                break;
-            case 12 :
-                randomNum = 'L';
-                break;
-            case 13 :
-                randomNum = 'M';
-                break;
-            case 14 :
-                randomNum = 'N';
-                break;
-            case 15 :
-                randomNum = 'O';
-                break;
-            case 16 :
-                randomNum = 'P';
-                break;
-            case 17 :
-                randomNum = 'Q';
-                break;
-            case 18 :
-                randomNum = 'R';
-                break;
-            case 19 :
-                randomNum = 'S';
-                break;
-            case 20 :
-                randomNum = 'T';
-                break;
-            case 21 :
-                randomNum = 'U';
-                break;
-            case 22 :
-                randomNum = 'V';
-                break;
-            case 23 :
-                randomNum = 'W';
-                break;
-            case 24 :
-                randomNum = 'X';
-                break;
-            case 25 :
-                randomNum = 'Y';
-                break;
-            case 26 :
-                randomNum = 'Z';
-                break;
-            default:
-                console.log('Shieet something happened with abc switch!!');
-        }
+    switch (randomNum) {
+        case 1:
+            randomNum = 'A';
+            break;
+        case 2:
+            randomNum = 'B';
+            break;
+        case 3:
+            randomNum = 'C';
+            break;
+        case 4:
+            randomNum = 'D';
+            break;
+        case 5:
+            randomNum = 'E';
+            break;
+        case 6:
+            randomNum = 'F';
+            break;
+        case 7:
+            randomNum = 'G';
+            break;
+        case 8:
+            randomNum = 'H';
+            break;
+        case 9:
+            randomNum = 'I';
+            break;
+        case 10:
+            randomNum = 'J';
+            break;
+        case 11:
+            randomNum = 'K';
+            break;
+        case 12:
+            randomNum = 'L';
+            break;
+        case 13:
+            randomNum = 'M';
+            break;
+        case 14:
+            randomNum = 'N';
+            break;
+        case 15:
+            randomNum = 'O';
+            break;
+        case 16:
+            randomNum = 'P';
+            break;
+        case 17:
+            randomNum = 'Q';
+            break;
+        case 18:
+            randomNum = 'R';
+            break;
+        case 19:
+            randomNum = 'S';
+            break;
+        case 20:
+            randomNum = 'T';
+            break;
+        case 21:
+            randomNum = 'U';
+            break;
+        case 22:
+            randomNum = 'V';
+            break;
+        case 23:
+            randomNum = 'W';
+            break;
+        case 24:
+            randomNum = 'X';
+            break;
+        case 25:
+            randomNum = 'Y';
+            break;
+        case 26:
+            randomNum = 'Z';
+            break;
+        default:
+            console.log('Shieet something happened with abc switch!!');
+    }
 
     let randomLetter = randomNum;
-        
+
     return randomLetter;
-    }
-
+}
 // Random letter generator ends here //
+function wordGen() {
 
+    let randomWord = '';
 
-     function wordGen() {
-        
-        let randomWord = '';
-
-        while (randomWord.length < 3) {
-            randomWord = randomWord.concat(randomLetterGen());
-        }
-        let infiWord = randomWord;
-        return infiWord;
+    while (randomWord.length < 3) {
+        randomWord = randomWord.concat(randomLetterGen());
     }
-     
+    let infiWord = randomWord;
+    return infiWord;
+}
 // Random word generator ends here //
+document.getElementById('para').innerHTML = wordGen();
 
-    document.getElementById('para').innerHTML = wordGen();
-    
-    
-    </script>
+</script>
 </body>
 </html>
